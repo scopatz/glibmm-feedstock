@@ -17,7 +17,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
     - pkg-config
     - libsigcpp
     - glib
-    - xz 5.0.*
+    - xz 5.2.*
 
 test:
   commands:
