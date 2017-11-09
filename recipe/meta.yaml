@@ -18,20 +18,28 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
 
 requirements:
   build:
-    - pkg-config
+    - pkg-config       # [unix]
+    - glib 2.51.*      # [unix]
+    - xz 5.2.*         # [unix]
+    - posix            # [win]
+    - m2w64-toolchain  # [win]
+    - m2-pkg-config    # [win]
+    - m2-glib2         # [win]
     - libsigcpp
-    - glib 2.51.*
-    - xz 5.2.*
+  run:
+    - posix            # [win]
+    - m2w64-gcc-libs   # [win]    
+    - m2-glib2         # [win]
+    - libsigcpp        # [win]
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/libgiomm-2.4{{ libext }}
-    - test -f ${PREFIX}/lib/libglibmm-2.4{{ libext }}
-    - test -f ${PREFIX}/lib/libglibmm_generate_extra_defs-2.4{{ libext }}
+    - test -f ${PREFIX}/lib/libgiomm-2.4{{ libext }}   # [unix]
+    - test -f ${PREFIX}/lib/libglibmm-2.4{{ libext }}  # [unix]
+    - test -f ${PREFIX}/lib/libglibmm_generate_extra_defs-2.4{{ libext }}  # [unix]
 
 about:
   home: http://www.gtkmm.org
