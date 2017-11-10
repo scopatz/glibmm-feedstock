@@ -1,0 +1,12 @@
+diff -Naur ../glibmm-2.48.1-orig/configure ./configure
+--- ../glibmm-2.48.1-orig/configure     2017-11-09 20:38:11.915933800 -0500
++++ ./configure 2017-11-09 20:39:32.976053900 -0500
+@@ -17194,7 +17194,7 @@
+   gsettingsschemadir=${datadir}/glib-2.0/schemas
+
+   if test x$cross_compiling != xyes; then
+-    GLIB_COMPILE_SCHEMAS=`$PKG_CONFIG --variable glib_compile_schemas gio-2.0`
++    GLIB_COMPILE_SCHEMAS=glib-compile-schemas.exe
+   else
+     # Extract the first word of "glib-compile-schemas", so it can be a program name with args.
+ set dummy glib-compile-schemas; ac_word=$2
