@@ -23,9 +23,11 @@ build:
 requirements:
   build:
     - pkg-config
+    - {{ compiler('cxx') }}
+  host:
     - libsigcpp
-    - glib 2.51.*
-    - xz 5.2.*
+    - glib
+    - xz
 
 test:
   commands:
