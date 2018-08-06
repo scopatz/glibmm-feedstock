@@ -14,14 +14,16 @@ Summary: This is glibmm, a C++ API for parts of glib that are useful for C++.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/glibmm-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/glibmm-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/glibmm-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/glibmm-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/glibmm-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/glibmm-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/glibmm-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/glibmm-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glibmm/badges/version.svg)](https://anaconda.org/conda-forge/glibmm)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glibmm/badges/downloads.svg)](https://anaconda.org/conda-forge/glibmm)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-glibmm-green.svg)](https://anaconda.org/conda-forge/glibmm) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/glibmm.svg)](https://anaconda.org/conda-forge/glibmm) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/glibmm.svg)](https://anaconda.org/conda-forge/glibmm) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/glibmm.svg)](https://anaconda.org/conda-forge/glibmm) |
 
 Installing glibmm
 =================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
