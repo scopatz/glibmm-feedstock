@@ -25,3 +25,6 @@ mv docs/Makefile.in.new docs/Makefile.in
   || { cat config.log; exit 1; }
 make
 make install
+
+# remove all libtool files
+find $PREFIX -name '*.la' -delete
