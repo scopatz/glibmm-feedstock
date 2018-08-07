@@ -1,6 +1,6 @@
-{% set major_minor = "2.48" %}
-{% set version = major_minor + ".1" %}
-{% set sha256 = "dc225f7d2f466479766332483ea78f82dc349d59399d30c00de50e5073157cdf" %}
+{% set major_minor = "2.56" %}
+{% set version = major_minor + ".0" %}
+{% set sha256 = "6e74fcba0d245451c58fc8a196e9d103789bc510e1eee1a9b1e816c5209e79a9" %}
 {% if linux %}
     {% set libext = ".so" %}
 {% else %}
@@ -17,7 +17,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
 
 requirements:
