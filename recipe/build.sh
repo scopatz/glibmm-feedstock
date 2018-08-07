@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -ex
 
-export CFLAGS="-O3"
-export CXXFLAGS="-O3"
+export CFLAGS="${CFLAGS} -O3"
+export CXXFLAGS="${CXXFLAGS} -O3"
 
 # configure, make, install, check
 sed -e '/^libdocdir =/ s/$(book_name)/glibmm-'"${PKG_VERSION}"'/' \

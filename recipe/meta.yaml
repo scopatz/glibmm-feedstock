@@ -41,7 +41,9 @@ test:
 
 about:
   home: http://www.gtkmm.org
-  license: GNU Lesser General Public License v2.1
+  license: LGPL v2.1
+  license_family: GPL
+  license_file: COPYING
   summary: "This is glibmm, a C++ API for parts of glib that are useful for C++."
 
 extra:
