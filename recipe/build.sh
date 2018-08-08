@@ -4,6 +4,11 @@ set -ex
 export CFLAGS="${CFLAGS} -O3"
 export CXXFLAGS="${CXXFLAGS} -O3"
 
+if [ "$(uname)" == "Linux" ]; then
+  # need to enable C++11 on linux explicitly
+  export CXXFLAGS="${CXXFLAGS} -std=c++11"
+fi
+
 # configure, make, install, check
 sed -e '/^libdocdir =/ s/$(book_name)/glibmm-'"${PKG_VERSION}"'/' \
     docs/Makefile.in > docs/Makefile.in.new
