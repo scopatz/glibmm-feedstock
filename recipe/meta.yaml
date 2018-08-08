@@ -1,6 +1,6 @@
-{% set major_minor = "2.48" %}
+{% set major_minor = "2.52" %}
 {% set version = major_minor + ".1" %}
-{% set sha256 = "dc225f7d2f466479766332483ea78f82dc349d59399d30c00de50e5073157cdf" %}
+{% set sha256 = "dc19d20fb6b24d6b6da7cbe1b2190b38ae6ad64e6b93fecdcce71b995f43c975" %}
 {% if linux %}
     {% set libext = ".so" %}
 {% else %}
@@ -17,15 +17,22 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win]
 
 requirements:
   build:
+    - make
     - pkg-config
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - libsigcpp
-    - glib 2.51.*
-    - xz 5.2.*
+    - glib
+    - xz
+  run:
+    - libsigcpp
+    - glib
 
 test:
   commands:
@@ -35,7 +42,9 @@ test:
 
 about:
   home: http://www.gtkmm.org
-  license: GNU Lesser General Public License v2.1
+  license: LGPL v2.1
+  license_family: GPL
+  license_file: COPYING
   summary: "This is glibmm, a C++ API for parts of glib that are useful for C++."
 
 extra:

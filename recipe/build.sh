@@ -1,19 +1,13 @@
 #!/usr/bin/env bash
-set -e
+set -ex
 
-export CFLAGS="-O3"
-export CXXFLAGS="-O3"
-if [ "$(uname)" == "Darwin" ]; then
-  # for Mac OSX
-  export CC=clang
-  export CXX=clang++
-  export MACOSX_VERSION_MIN="10.7"
-  export MACOSX_DEPLOYMENT_TARGET="${MACOSX_VERSION_MIN}"
-  export CXXFLAGS="${CXXFLAGS} -mmacosx-version-min=${MACOSX_VERSION_MIN}"
-  export CXXFLAGS="${CXXFLAGS} -stdlib=libc++"
-  export LDFLAGS="${LDFLAGS} -mmacosx-version-min=${MACOSX_VERSION_MIN}"
-  export LDFLAGS="${LDFLAGS} -stdlib=libc++ -lc++"
-  export LINKFLAGS="${LDFLAGS}"
+export CFLAGS="${CFLAGS} -O3"
+export CXXFLAGS="${CXXFLAGS} -O3"
+
+if [ "$(uname)" == "Linux" ]; then
+  # need to enable C++11 on linux explicitly
+  export CFLAGS="${CFLAGS} -std=c++11"
+  export CXXFLAGS="${CXXFLAGS} -std=c++11"
 fi
 
 # configure, make, install, check
