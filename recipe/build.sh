@@ -6,6 +6,7 @@ export CXXFLAGS="${CXXFLAGS} -O3"
 
 if [ "$(uname)" == "Linux" ]; then
   # need to enable C++11 on linux explicitly
+  export CFLAGS="${CFLAGS} -std=c++11"
   export CXXFLAGS="${CXXFLAGS} -std=c++11"
 fi
 
